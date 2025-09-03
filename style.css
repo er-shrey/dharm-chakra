@@ -1,0 +1,117 @@
+/*-----------------  GOOGLE FONTS  -----------------*/
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+
+/*-----------------  VARIABLES  -----------------*/
+:root {
+  /* Colors */
+  --white_color: rgb(255, 255, 255);
+  --gold_color: rgb(255, 215, 0);
+  --green_color: rgb(45, 252, 26);
+  --body_background: linear-gradient(to right, #141e30, #243b55);
+  --spin_background: linear-gradient(to right, #fc4a1a, #f7b733);
+}
+/*-----------------  Base  -----------------*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "PT Serif", serif;
+}
+body {
+  height: 100vh;
+  background: var(--body_background);
+}
+/*-----------------  Styling Start  -----------------*/
+.container {
+  height: 90vh;
+  aspect-ratio: 1/1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.wheel_box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#spinWheel {
+  max-height: inherit;
+  width: inherit;
+  transform: rotate(270deg);
+}
+#spin_btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  aspect-ratio: 1 / 1 !important;
+  width: 26%;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0;
+  background: var(--spin_background);
+  color: var(--white_color);
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+.fa-solid {
+  position: absolute;
+  top: -8%;
+  left: 43.7%;
+  font-size: 4rem;
+  color: var(--green_color);
+  transform: rotate(-225deg);
+}
+
+/* ...existing code... */
+.round-buttons {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 100;
+}
+
+.round-buttons button {
+  padding: 8px 16px;
+  border: none;
+  background: #cb762b;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.round-buttons button:hover {
+  background: #ca6208;
+}
+/* ...existing code... */
+.current-round {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  color: white;
+  font-size: 4.2rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(253, 242, 242, 0.07);
+  z-index: 200;
+  transform: translateY(-50%);
+}
+
+#text {
+  font-size: 4.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--gold_color);
+  font-weight: 500;
+  position: fixed;
+  top: 50%;
+  right: 5rem;
+  transform: translateY(-50%);
+  max-width: 220px;
+}
